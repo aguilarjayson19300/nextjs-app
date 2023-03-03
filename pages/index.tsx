@@ -3,10 +3,19 @@ import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
 import Button from './components/Button';
-import React, { useState,} from "react";
+import React, { useState } from "react";
 
 export default function Home() {
-  
+  const [count, setCount] = useState<number>(0);
+
+  const handleIncrement = () => {
+    setCount(count + 1);
+  };
+
+  const handleDecrement = () => {
+    setCount(count - 1);
+  };
+
   return (
     <>
       <Head>
@@ -15,7 +24,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-        
+
       <main className={styles.main}>
         <div className={styles.description}>
           <p>
@@ -28,25 +37,29 @@ export default function Home() {
               current count. Add some basic styling to make the button stand out.</p>
           </p>
 
-                      
           <div className={styles.center}>
-            <div>
-                <p>9</p>
+            <div className={styles.buttoncon}>
+              <div>
+                <Button name={'+'} onPress={() => handleIncrement()} />
+              </div>
+              <div>
+                <Button name={'-'} onPress={() => handleDecrement()} />
+              </div>
             </div>
             <div>
-              <p>1</p>
+              <p>{count}</p>
             </div>
           </div>
 
           <div>
-              <Image
-                src="/nico.png"
-                alt="nicolai"
-                className={styles.vercelLogo}
-                width={75}
-                height={350}
-                priority
-              />
+            <Image
+              src="/nico.png"
+              alt="nicolai"
+              className={styles.vercelLogo}
+              width={75}
+              height={350}
+              priority
+            />
           </div>
         </div>
       </main>

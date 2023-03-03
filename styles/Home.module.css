@@ -39,11 +39,12 @@
 .description .task{
   font-size: 11px;
   padding: 5px;
-  background-color: rgb(100, 119, 64);
-  border-radius: 10px;
+  background-image: linear-gradient( rgb(136, 230, 167), rgb(100, 94, 100));
+  border-radius: 12px;
   width: 50px;
   text-align: center;
-  color: azure;
+  color: white;
+  font-weight:400;
 }
 
 .description .title{
@@ -51,6 +52,7 @@
   text-align: left;
   margin-bottom: 5%;
   color: rgb(117, 94, 64);
+  font-weight: bold;
 }
 
 .description .direction{
@@ -106,6 +108,30 @@
   display: flex;
 }
 
+.center button{
+  background-image: linear-gradient( rgb(51, 228, 110), rgb(54, 51, 54));
+  border: none;
+  width: 80px;
+  height: 100px;
+  color: white;
+  border-radius: 6px;
+  font-family: var(--font-mono);
+  align-items: left;
+  justify-content: left;
+  margin-top: 20px;
+}
+.center button:hover{
+  background-position: right center;
+  background-image: linear-gradient( rgb(138, 206, 223), rgb(54, 51, 54));
+}
+
+.buttoncon{
+margin-top: 50px;
+margin-right: 120px;
+position: absolute;
+right: 600px;
+}
+
 .center.butt{
   width: 100px;
   height: 100px;
@@ -122,6 +148,7 @@
   font-weight: bold;
   font-size: 300px;
   color: darkgrey;
+  text-align: right;
 }
 
 .thirteen {
